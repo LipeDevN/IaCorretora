@@ -1,7 +1,7 @@
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 
-// Inicializar Gemini com a API key
-const genAI = new GoogleGenerativeAI('AIzaSyAn2R9MAHQEoItXZmJ9t_SXxzXCFmfNSVU');
+// Inicializar Gemini com a API key do ambiente
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || 'AIzaSyAn2R9MAHQEoItXZmJ9t_SXxzXCFmfNSVU');
 
 module.exports = async function handler(req, res) {
   // Configurar CORS
