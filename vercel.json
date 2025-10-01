@@ -3,5 +3,7 @@
     "api/analyze.js": {
       "maxDuration": 30
     }
-  }
+  },
+  "buildCommand": "echo 'Build complete'",
+  "outputDirectory": "."
 }
