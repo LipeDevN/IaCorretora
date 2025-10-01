@@ -1,0 +1,26 @@
+{
+  "name": "ai-corretora-redacao",
+  "version": "1.0.0",
+  "description": "IA Corretora de Redações do ENEM usando Gemini API",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'Build complete'",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.2.1"
+  },
+  "devDependencies": {
+    "@vercel/node": "^3.0.0"
+  },
+  "keywords": [
+    "enem",
+    "redacao",
+    "ia",
+    "gemini",
+    "corretor"
+  ],
+  "author": "Redação Reta Final",
+  "license": "MIT"
+}

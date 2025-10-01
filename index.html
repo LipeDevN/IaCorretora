@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA Corretora de Redações ENEM - Redação Reta Final</title>
+    <meta name="description" content="Correção automática de redações ENEM com IA. Feedback instantâneo baseado nos 5 critérios oficiais. Nota estimada e sugestões de melhoria.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-robot"></i>
+                <span>IA Corretora ENEM</span>
+            </div>
+            <div class="header-info">
+                <span class="beta-badge">🚀 BETA</span>
+                <span class="powered-by">Powered by Gemini AI</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <i class="fas fa-brain"></i>
+                    Correção Inteligente de Redações
+                </h1>
+                <p class="hero-subtitle">
+                    Análise automática baseada nos <strong>5 critérios oficiais do ENEM</strong><br>
+                    Feedback detalhado em segundos com Inteligência Artificial
+                </p>
+                
+                <div class="features-preview">
+                    <div class="feature-item">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Nota Estimada</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-list-check"></i>
+                        <span>5 Competências</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <span>Sugestões de Melhoria</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Resultado Instantâneo</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Application -->
+    <main class="main-app">
+        <div class="container">
+            <div class="app-grid">
+                <!-- Input Section -->
+                <div class="input-section">
+                    <div class="input-header">
+                        <h2><i class="fas fa-pen"></i> Cole sua redação aqui</h2>
+                        <div class="word-counter">
+                            <span id="word-count">0</span> palavras
+                        </div>
+                    </div>
+                    
+                    <div class="textarea-container">
+                        <textarea id="redacao-input" placeholder="Cole o texto da sua redação aqui...
+
+Exemplo de tema: 'Desafios para a formação educacional de surdos no Brasil'
+
+Dica: Uma redação completa do ENEM tem entre 150 e 400 palavras, estruturada em introdução, desenvolvimento (2 parágrafos) e conclusão com proposta de intervenção."></textarea>
+                    </div>
+                    
+                    <div class="input-actions">
+                        <button id="clear-btn" class="btn-secondary">
+                            <i class="fas fa-eraser"></i>
+                            Limpar
+                        </button>
+                        <button id="analyze-btn" class="btn-primary" disabled>
+                            <i class="fas fa-search"></i>
+                            Analisar Redação
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Results Section -->
+                <div class="results-section">
+                    <div class="results-header">
+                        <h2><i class="fas fa-chart-bar"></i> Análise da Redação</h2>
+                        <div class="loading-indicator" id="loading" style="display: none;">
+                            <i class="fas fa-spinner fa-spin"></i>
+                            Analisando...
+                        </div>
+                    </div>
+                    
+                    <div class="results-content" id="results-content">
+                        <div class="empty-state">
+                            <i class="fas fa-clipboard-list"></i>
+                            <h3>Aguardando redação...</h3>
+                            <p>Cole o texto da sua redação e clique em "Analisar" para receber feedback detalhado baseado nos critérios do ENEM.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Critérios Info -->
+    <section class="criterios-info">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-graduation-cap"></i>
+                Critérios de Avaliação do ENEM
+            </h2>
+            
+            <div class="criterios-grid">
+                <div class="criterio-card">
+                    <div class="criterio-number">1</div>
+                    <h3>Domínio da Escrita</h3>
+                    <p>Avaliação da modalidade escrita formal da língua portuguesa</p>
+                </div>
+                
+                <div class="criterio-card">
+                    <div class="criterio-number">2</div>
+                    <h3>Compreensão do Tema</h3>
+                    <p>Compreender a proposta de redação e aplicar conceitos das várias áreas</p>
+                </div>
+                
+                <div class="criterio-card">
+                    <div class="criterio-number">3</div>
+                    <h3>Argumentação</h3>
+                    <p>Selecionar, relacionar, organizar e interpretar informações</p>
+                </div>
+                
+                <div class="criterio-card">
+                    <div class="criterio-number">4</div>
+                    <h3>Coesão e Coerência</h3>
+                    <p>Demonstrar conhecimento dos mecanismos linguísticos</p>
+                </div>
+                
+                <div class="criterio-card">
+                    <div class="criterio-number">5</div>
+                    <h3>Proposta de Intervenção</h3>
+                    <p>Elaborar proposta de intervenção respeitando os direitos humanos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-robot"></i>
+                    <span>IA Corretora ENEM</span>
+                </div>
+                <p>Parte do ecossistema <strong>Redação Reta Final</strong></p>
+                <div class="footer-tech">
+                    <span>Powered by</span>
+                    <i class="fas fa-brain"></i>
+                    <span>Google Gemini AI</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
